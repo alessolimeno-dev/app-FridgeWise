@@ -296,23 +296,7 @@ export default {
       this.mostraModalAlimento = false
       this.targetPastoId = null
     },
-    /*selezionaAlimentoDaLista(alimento) {
-      this.selectedAlimentoId = alimento.id
-      this.formAlimento.alimentoId = alimento.id
-      this.formAlimento.nome = alimento.nome
-      
-      // Rilevamento automatico unità se disponibile
-      if (alimento.categoria === 'Bevande' || alimento.peso?.toLowerCase().includes('l')) {
-        this.formAlimento.unita = 'ml'
-        this.formAlimento.quantita = 250
-      } else if (alimento.peso?.toLowerCase().includes('g')) {
-        this.formAlimento.unita = 'g'
-        this.formAlimento.quantita = 100
-      } else {
-        this.formAlimento.unita = 'pz'
-        this.formAlimento.quantita = 1
-      }*/
-    },
+  
     confermaAggiungiAlimento(payload) {
       const pastoId = payload?.pastoId || this.targetPastoId
       const nome = payload?.nome || this.formAlimento.nome
@@ -329,26 +313,7 @@ export default {
     rimuoviAlimento(pastoId, itemId) {
       this.store.rimuoviAlimentoDaPasto(this.dataSelezionata, pastoId, itemId)
     },
-    /*getIconaPasto(nome) {
-      if (!nome) return '🍽️'
-      const n = nome.toLowerCase()
-      if (n.includes('colazione')) return '🥐'
-      if (n.includes('mattina') || n.includes('spuntino')) return '🍎'
-      if (n.includes('pranzo')) return '🥗'
-      if (n.includes('merenda')) return '🥪'
-      if (n.includes('cena')) return '🍲'
-      if (n.includes('sera')) return '🍵'
-      return '🍽️'
-    },
-    formattaLuogo(luogo) {
-      if (!luogo) return ''
-      const l = luogo.toLowerCase()
-      if (l === 'frigo') return '🧊 Frigo'
-      if (l === 'dispensa') return '🥫 Dispensa'
-      if (l === 'freezer') return '❄️ Freezer'
-      return luogo
-    }
-  }*/
+  }
 }
 </script>
 

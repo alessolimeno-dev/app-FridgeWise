@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+
+:root {
+  /* ==========================================================================
+     INIZIALIZZAZIONE GLOBALE FONT FAMILIES
+     --font-titles: Nomi pagine header, nomi alimenti, nomi pasti, intestazioni
+     --font-body:   Bottoni (uguale a "Tutto", "Dispensa"), badge, dettagli alimenti
+     ========================================================================== */
+  --font-titles: 'Yeseva One', cursive;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Sovrascrittura variabili Bootstrap per allineare l'applicazione */
+  --bs-body-font-family: var(--font-body);
+  --bs-font-sans-serif: var(--font-body);
+
+  --black: #0E1828;
+  --dblue: #1D3557;
+  --mblu: #457B9D;
+  --lblue: #A7DADB;
+  --white: #EDF0FA;
+  --grey: #D5DCE9;
+  --orange: #fb8f55;
+  --red: #E63946;
+  --yellow: #f6bf35;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Corpo pagina e testi generici */
+body {
+  background-color: #ffffff;
+  font-family: var(--font-body);
+  color: var(--black);
+}
+
+/* ==========================================================================
+   TITOLI GLOBALI (Mantenuto 'Yeseva One', cursive)
+   - Titoli e nomi delle pagine visualizzati nell'header
+   - Nomi degli alimenti (in FoodCard, FoodDetail, elenchi e modali)
+   - Nomi dei pasti (in PastoCard, MealPlanner)
+   - Intestazioni di sezione h1-h6
+   ========================================================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-title,
+.food-title,
+.cibo-nome,
+.pasto-title,
+.header-title,
+.app-header h1,
+.app-header h2,
+.app-header h3,
+.app-header h4 {
+  font-family: var(--font-titles);
+  color: var(--black);
+}
+
+/* ==========================================================================
+   TESTI: BOTTONI, BADGE, DETTAGLI ALIMENTI ('Montserrat', sans-serif)
+   - Stessa famiglia di font dei bottoni filtri ("Tutto", "Dispensa", ecc.)
+   ========================================================================== */
+button,
+input,
+optgroup,
+select,
+textarea,
+.btn,
+.base-btn,
+.badge,
+.badge-base,
+.badge-scadenza,
+.food-weight,
+.food-expiry,
+.food-card-badges,
+.food-card-layout,
+.food-card-expiry-row,
+.food-detail-box,
+.detail-box,
+.info-box,
+.form-control,
+.form-select,
+.dropdown-menu,
+.table {
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bg-card-custom {
+  background-color: var(--white) !important;
+  border-radius: 16px;
+}
+
+.btn-custom-primary {
+  background-color: var(--dblue) !important;
+  color: #ffffff !important;
+  border-color: var(--dblue) !important;
+  border-radius: 18px;
+}
+
+.btn-custom-primary:hover {
+  background-color: var(--mblu) !important;
+  border-color: var(--mblu) !important;
+}
+
+/* ==========================================================================
+   BADGE DATA DI SCADENZA
+   - Se scaduto: Rosso (var(--red))
+   - Se sta per scadere: Giallo (var(--yellow))
+   - Se valido: Verde
+   ========================================================================== */
+.badge-scadenza {
+  background-color: var(--yellow);
+  color: var(--black);
+}
+
+/* Scaduto: Rosso */
+.badge-scadenza.badge-scaduto,
+.badge-scadenza.bg-danger,
+.badge-scaduto {
+  background-color: var(--red, #E63946) !important;
+  color: #ffffff !important;
+}
+
+/* In scadenza (sta per scadere): Giallo */
+.badge-scadenza.badge-in-scadenza,
+.badge-scadenza.bg-warning,
+.badge-in-scadenza {
+  background-color: var(--yellow, #f6bf35) !important;
+  color: var(--black, #0E1828) !important;
+}
+
+/* Valido (> 3 giorni): Verde */
+.badge-scadenza.badge-valido,
+.badge-scadenza.bg-success,
+.badge-valido {
+  background-color: #198754 !important;
+  color: #ffffff !important;
+}
+
+/* Contenitore principale dell'app per smartphone e responsive */
+#app {
+  width: 100%;
+  max-width: 768px;
+  /* per mobile/tablet */
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Footer (Sidebar Mobile e Desktop) */
+.app-footer {
+  background-color: var(--dblue) !important;
+  color: var(--lblue) !important;
+  font-size: 0.72rem;
+  line-height: 1.2;
+}
+
+.app-footer span,
+.app-footer .footer-text {
+  color: var(--lblue) !important;
+  font-size: 0.72rem;
+}
+
+.app-footer a,
+.app-footer .footer-link {
+  color: var(--orange) !important;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.72rem;
+  transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+.app-footer a:hover,
+.app-footer .footer-link:hover {
+  color: #ffffff !important;
+  text-decoration: underline !important;
+}
+
+.app-footer .footer-divider {
+  color: var(--mblu) !important;
+  opacity: 0.7;
+}
+
+.sidebar-footer {
+  border-radius: 10px;
+  padding: 6px 8px;
+}
+
+.app-desktop-footer {
+  width: 100%;
+  border-top: 1px solid rgba(69, 123, 157, 0.2);
+  border-radius: 12px 12px 0 0;
+  padding: 8px 12px;
+}
+
+/* Stili Sidebar Mobile (Offcanvas) */
+.hamburger-btn {
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(29, 53, 87, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 1060;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebar-offcanvas {
+  width: 75%;
+  max-width: 320px;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+  z-index: 1070;
+  animation: slideInRight 0.25s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Nav bar bottoni desktop: assente su telefono e tablet (< 900px) */
+.header-desktop-actions {
+  display: none !important;
+}
+
+/* Media query generale (mobile first): oltre i 900px (Desktop) */
+@media (min-width: 900px) {
+  /* Nav bar bottoni desktop: presente su desktop */
+  .header-desktop-actions {
+    display: flex !important;
+  }
+
+  /* Sidebar e pulsante menu hamburger: assenti su desktop */
+  .hamburger-btn,
+  .sidebar-backdrop,
+  .sidebar-offcanvas {
+    display: none !important;
+  }
+}
+
+/* Media query per schermi desktop (>= 992px) */
+@media (min-width: 992px) {
+  #app {
+    max-width: 1140px;
+  }
+}
+
+/*MODALI*/
+/* Stili Modale di Conferma Eliminazione */
+.modal-backdrop-custom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(14, 24, 40, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1100;
+}
+
+.max-w-modal {
+  max-width: 420px;
+}
+
+.animate-in {
+  animation: fadeInModal 0.2s ease-out;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/*TOAST*/
+.toast-notification-custom {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1200;
+  max-width: 90vw;
+  pointer-events: auto;
+}
+
+@keyframes slideUpToast {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes slideDownToast {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+}

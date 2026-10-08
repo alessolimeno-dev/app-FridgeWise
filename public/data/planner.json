@@ -1,0 +1,133 @@
+[
+  {
+    "id": "planner_oggi",
+    "offsetGiorni": 0,
+    "pasti": [
+      {
+        "id": "pasto_1",
+        "nome": "Colazione",
+        "alimenti": [
+          {
+            "id": "al_1",
+            "alimentoId": 2,
+            "nome": "Latte Intero",
+            "quantita": 250,
+            "unita": "ml"
+          },
+          {
+            "id": "al_2",
+            "alimentoId": 3,
+            "nome": "Banane",
+            "quantita": 2,
+            "unita": "pz"
+          }
+        ]
+      },
+      {
+        "id": "pasto_2",
+        "nome": "Pranzo",
+        "alimenti": [
+          {
+            "id": "al_3",
+            "alimentoId": 1,
+            "nome": "Spaghetti",
+            "quantita": 100,
+            "unita": "g"
+          },
+          {
+            "id": "al_4",
+            "alimentoId": 9,
+            "nome": "Zucchine",
+            "quantita": 2,
+            "unita": "pz"
+          }
+        ]
+      },
+      {
+        "id": "pasto_3",
+        "nome": "Cena",
+        "alimenti": [
+          {
+            "id": "al_5",
+            "alimentoId": 5,
+            "nome": "Uova Fresche",
+            "quantita": 2,
+            "unita": "pz"
+          },
+          {
+            "id": "al_6",
+            "alimentoId": null,
+            "nome": "Pizza Margherita",
+            "quantita": 1,
+            "unita": "pz"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "planner_ieri",
+    "offsetGiorni": -1,
+    "pasti": [
+      {
+        "id": "pasto_4",
+        "nome": "Pranzo",
+        "alimenti": [
+          {
+            "id": "al_7",
+            "alimentoId": 4,
+            "nome": "Petto di Pollo",
+            "quantita": 200,
+            "unita": "g"
+          },
+          {
+            "id": "al_8",
+            "alimentoId": 6,
+            "nome": "Fette Wasa Integrali",
+            "quantita": 3,
+            "unita": "fette"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "planner_domani",
+    "offsetGiorni": 1,
+    "pasti": [
+      {
+        "id": "pasto_5",
+        "nome": "Colazione",
+        "alimenti": [
+          {
+            "id": "al_9",
+            "alimentoId": 7,
+            "nome": "Yogurt Greco Bianco",
+            "quantita": 150,
+            "unita": "g"
+          },
+          {
+            "id": "al_10",
+            "alimentoId": 3,
+            "nome": "Banane",
+            "quantita": 1,
+            "unita": "pz"
+          }
+        ]
+      },
+      {
+        "id": "pasto_6",
+        "nome": "Cena",
+        "alimenti": [
+          {
+            "id": "al_11",
+            "alimentoId": 10,
+            "nome": "Salmone Fresco",
+            "quantita": 200,
+            "unita": "g"
+          }
+        ]
+      }
+    ]
+  }
+]
